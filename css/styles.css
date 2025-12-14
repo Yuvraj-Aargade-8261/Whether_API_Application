@@ -403,10 +403,12 @@ body {
     margin-bottom: var(--spacing-xl);
     flex-wrap: wrap;
     gap: var(--spacing-md);
+    width: 100%;
 }
 
 .location-info {
     flex: 1;
+    min-width: 0;
 }
 
 .city-name {

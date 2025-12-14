@@ -154,39 +154,67 @@
     .weather-header {
         flex-direction: column;
         text-align: center;
-        gap: var(--spacing-xs);
-        margin-bottom: var(--spacing-md);
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .location-info {
+        width: 100%;
+        order: 1;
     }
 
     .city-name {
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-3xl);
         line-height: 1.2;
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
         max-width: 100%;
+        margin-bottom: var(--spacing-xs);
+        text-align: center;
     }
 
-    .country-code {
+    .country-name {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-xs);
+        text-align: center;
+        color: var(--text-secondary);
+    }
+
+    .current-date {
         font-size: var(--font-size-sm);
-        margin-top: 2px;
+        text-align: center;
+        color: var(--text-muted);
     }
 
-    .weather-date {
-        font-size: var(--font-size-xs);
-        margin-top: var(--spacing-xs);
+    .weather-icon-container {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: var(--spacing-sm) 0;
     }
 
     .weather-icon {
-        width: 100px;
-        height: 100px;
-        margin: var(--spacing-sm) auto;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
     }
 
     .temperature-section {
         text-align: center;
-        margin-bottom: var(--spacing-md);
-        padding: var(--spacing-sm) 0;
+        margin-bottom: var(--spacing-lg);
+        padding: var(--spacing-md);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: var(--radius-lg);
+        order: 3;
+    }
+
+    .main-temp {
+        justify-content: center;
+        margin-bottom: var(--spacing-sm);
     }
 
     .temperature {
@@ -197,13 +225,14 @@
 
     .temp-unit {
         font-size: var(--font-size-3xl);
-        vertical-align: top;
+        margin-top: var(--spacing-xs);
     }
 
     .weather-description {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
         margin-top: var(--spacing-sm);
         font-weight: 500;
+        text-transform: capitalize;
     }
 
     /* Weather Details Mobile */
