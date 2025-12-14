@@ -136,18 +136,18 @@
     }
 
     .detail-item {
-        padding: var(--spacing-lg);
-        min-height: 150px;
+        padding: var(--spacing-sm);
+        gap: var(--spacing-sm);
     }
 
     .detail-item i {
-        font-size: var(--font-size-2xl);
-        width: 70px;
-        height: 70px;
+        font-size: var(--font-size-lg);
+        width: 35px;
+        height: 35px;
     }
     
     .detail-value {
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-base);
     }
 
     .section-title {

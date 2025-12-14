@@ -68,3 +68,6 @@ api-keys.json
 frontend/node_modules/
 frontend/package-lock.json
 
+# Vercel
+.vercel
+
