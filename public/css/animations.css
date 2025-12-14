@@ -1,0 +1,816 @@
+/* ============================================
+   Weather API Application - Animations
+   ============================================ */
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Cloud Animations */
+@keyframes cloudMove1 {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(calc(100vw + 100px));
+    }
+}
+
+@keyframes cloudMove2 {
+    0% {
+        transform: translateX(calc(100vw + 100px));
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes cloudMove3 {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(calc(100vw + 150px));
+    }
+}
+
+@keyframes cloudFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Shooting Star Animations */
+@keyframes shootStar {
+    0% {
+        left: -150px;
+        top: -150px;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 200px);
+        top: calc(100vh + 200px);
+        opacity: 0;
+    }
+}
+
+@keyframes shootStar2 {
+    0% {
+        left: -200px;
+        top: 100vh;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 200px);
+        top: -200px;
+        opacity: 0;
+    }
+}
+
+@keyframes shootStar3 {
+    0% {
+        left: -100px;
+        top: -100px;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 150px);
+        top: calc(100vh + 150px);
+        opacity: 0;
+    }
+}
+
+@keyframes shootStar4 {
+    0% {
+        left: -180px;
+        top: 100vh;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 180px);
+        top: -180px;
+        opacity: 0;
+    }
+}
+
+@keyframes shootStar5 {
+    0% {
+        left: -120px;
+        top: -120px;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 170px);
+        top: calc(100vh + 170px);
+        opacity: 0;
+    }
+}
+
+/* Meteor Animations */
+@keyframes meteorFall {
+    0% {
+        left: -300px;
+        top: -300px;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 300px);
+        top: calc(100vh + 300px);
+        opacity: 0;
+    }
+}
+
+@keyframes meteorFall2 {
+    0% {
+        left: -250px;
+        top: 100vh;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: calc(100vw + 250px);
+        top: -250px;
+        opacity: 0;
+    }
+}
+
+/* Sparkle Animations */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+@keyframes sparkleFloat {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    33% {
+        transform: translateY(-30px) translateX(20px);
+    }
+    66% {
+        transform: translateY(-60px) translateX(-20px);
+    }
+    100% {
+        transform: translateY(-90px) translateX(0);
+    }
+}
+
+/* Star Animation */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Background Animation Elements */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    opacity: 0.3;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+}
+
+.cloud-1 {
+    width: 200px;
+    height: 60px;
+    top: 20%;
+    left: -200px;
+    animation: cloudMove1 30s linear infinite, cloudFloat 6s ease-in-out infinite;
+}
+
+.cloud-1::before {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 20px;
+}
+
+.cloud-1::after {
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    right: 20px;
+}
+
+.cloud-2 {
+    width: 250px;
+    height: 70px;
+    top: 50%;
+    left: -250px;
+    animation: cloudMove2 40s linear infinite, cloudFloat 8s ease-in-out infinite;
+    animation-delay: -10s;
+}
+
+.cloud-2::before {
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    left: 30px;
+}
+
+.cloud-2::after {
+    width: 140px;
+    height: 140px;
+    top: -70px;
+    right: 30px;
+}
+
+.cloud-3 {
+    width: 180px;
+    height: 55px;
+    top: 70%;
+    left: -180px;
+    animation: cloudMove3 35s linear infinite, cloudFloat 7s ease-in-out infinite;
+    animation-delay: -5s;
+}
+
+.cloud-3::before {
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    left: 15px;
+}
+
+.cloud-3::after {
+    width: 110px;
+    height: 110px;
+    top: -55px;
+    right: 15px;
+}
+
+/* Shooting Stars - Light colored streaks */
+.shooting-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 3px;
+    height: 150px;
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.9) 20%,
+        rgba(200, 220, 255, 0.7) 50%, 
+        rgba(150, 180, 255, 0.4) 80%,
+        transparent 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1),
+                0 0 30px rgba(255, 255, 255, 0.8),
+                0 0 50px rgba(200, 220, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: left, top, opacity, transform;
+    z-index: 1;
+}
+
+.star-1 {
+    left: -150px;
+    top: -150px;
+    animation: shootStar 2s linear infinite;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    height: 150px;
+}
+
+.star-2 {
+    left: -200px;
+    top: 100vh;
+    animation: shootStar2 2.8s linear infinite 0.5s;
+    height: 120px;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+}
+
+.star-3 {
+    left: -100px;
+    top: -100px;
+    animation: shootStar3 2.3s linear infinite 1s;
+    height: 140px;
+    transform: rotate(30deg);
+    transform-origin: center center;
+}
+
+.star-4 {
+    left: -180px;
+    top: 100vh;
+    animation: shootStar4 3s linear infinite 0.2s;
+    height: 130px;
+    transform: rotate(-60deg);
+    transform-origin: center center;
+}
+
+.star-5 {
+    left: -120px;
+    top: -120px;
+    animation: shootStar5 2.5s linear infinite 1.5s;
+    height: 160px;
+    transform: rotate(50deg);
+    transform-origin: center center;
+}
+
+.star-6 {
+    left: -160px;
+    top: 100vh;
+    animation: shootStar2 3.2s linear infinite 0.7s;
+    height: 110px;
+    transform: rotate(-35deg);
+    transform-origin: center center;
+}
+
+.star-7 {
+    left: -90px;
+    top: -90px;
+    animation: shootStar3 2.1s linear infinite 1.8s;
+    height: 145px;
+    transform: rotate(55deg);
+    transform-origin: center center;
+}
+
+.star-8 {
+    left: -140px;
+    top: 100vh;
+    animation: shootStar4 2.7s linear infinite 0.4s;
+    height: 125px;
+    transform: rotate(-50deg);
+    transform-origin: center center;
+}
+
+/* Meteors - Larger shooting stars with trails */
+.meteors {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.meteor {
+    position: absolute;
+    width: 4px;
+    height: 200px;
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.95) 10%,
+        rgba(200, 220, 255, 0.85) 30%, 
+        rgba(150, 180, 255, 0.6) 60%,
+        rgba(100, 150, 255, 0.3) 80%,
+        transparent 100%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                0 0 40px rgba(255, 255, 255, 0.8),
+                0 0 60px rgba(200, 220, 255, 0.6),
+                0 0 80px rgba(150, 180, 255, 0.4);
+    border-radius: 50%;
+    will-change: left, top, opacity, transform;
+    z-index: 1;
+}
+
+.meteor-1 {
+    left: -300px;
+    top: -300px;
+    animation: meteorFall 4s linear infinite;
+    height: 200px;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+.meteor-2 {
+    left: -250px;
+    top: 100vh;
+    animation: meteorFall2 5s linear infinite 2s;
+    height: 220px;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+}
+
+.meteor-3 {
+    left: -300px;
+    top: -300px;
+    animation: meteorFall 4.5s linear infinite 3.5s;
+    height: 180px;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+/* Sparkles - Twinkling light points */
+.sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.sparkle-1 {
+    top: 15%;
+    left: 20%;
+    animation: sparkle 2s ease-in-out infinite, sparkleFloat 8s ease-in-out infinite;
+}
+
+.sparkle-2 {
+    top: 35%;
+    right: 25%;
+    animation: sparkle 2.5s ease-in-out infinite 0.5s, sparkleFloat 10s ease-in-out infinite 1s;
+}
+
+.sparkle-3 {
+    top: 55%;
+    left: 60%;
+    animation: sparkle 3s ease-in-out infinite 1s, sparkleFloat 9s ease-in-out infinite 2s;
+}
+
+.sparkle-4 {
+    top: 75%;
+    right: 30%;
+    animation: sparkle 2.2s ease-in-out infinite 0.3s, sparkleFloat 11s ease-in-out infinite 3s;
+}
+
+.sparkle-5 {
+    top: 25%;
+    left: 50%;
+    animation: sparkle 2.8s ease-in-out infinite 1.5s, sparkleFloat 7s ease-in-out infinite 4s;
+}
+
+.sparkle-6 {
+    top: 65%;
+    left: 15%;
+    animation: sparkle 2.3s ease-in-out infinite 0.8s, sparkleFloat 12s ease-in-out infinite 5s;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 33% 80%, white, transparent),
+        radial-gradient(1px 1px at 15% 50%, white, transparent),
+        radial-gradient(2px 2px at 70% 20%, white, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 4s ease-in-out infinite;
+    opacity: 0.4;
+}
+
+/* Card Entrance Animations */
+.weather-card {
+    animation: fadeInUp 0.6s ease;
+}
+
+.forecast-card {
+    animation: fadeInUp 0.6s ease;
+    animation-fill-mode: both;
+}
+
+.forecast-card:nth-child(1) { animation-delay: 0.1s; }
+.forecast-card:nth-child(2) { animation-delay: 0.2s; }
+.forecast-card:nth-child(3) { animation-delay: 0.3s; }
+.forecast-card:nth-child(4) { animation-delay: 0.4s; }
+.forecast-card:nth-child(5) { animation-delay: 0.5s; }
+
+.history-item {
+    animation: slideInLeft 0.5s ease;
+    animation-fill-mode: both;
+}
+
+.history-item:nth-child(1) { animation-delay: 0.1s; }
+.history-item:nth-child(2) { animation-delay: 0.2s; }
+.history-item:nth-child(3) { animation-delay: 0.3s; }
+.history-item:nth-child(4) { animation-delay: 0.4s; }
+.history-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Hover Effects */
+.detail-item,
+.forecast-card,
+.history-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-item::before,
+.forecast-card::before,
+.history-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.detail-item:hover::before,
+.forecast-card:hover::before,
+.history-item:hover::before {
+    left: 100%;
+}
+
+/* Loading Animation Variants */
+@keyframes spinSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner.slow {
+    animation: spinSlow 2s linear infinite;
+}
+
+/* Ripple Effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.ripple {
+    position: absolute;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+}
+
+/* Text Gradient Animation */
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 3s ease infinite;
+}
+
+/* Smooth Transitions for View Switching */
+.weather-view {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.weather-view.active {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Button Press Animation */
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button-press {
+    animation: buttonPress 0.2s ease;
+}
+
+/* Success Check Animation */
+@keyframes checkmark {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.checkmark-animation {
+    animation: checkmark 0.5s ease;
+}
+

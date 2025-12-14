@@ -72,6 +72,7 @@ frontend/package-lock.json
 .vercel
 
 # Generated public directory (copy of frontend for Vercel)
-# We'll commit public/ to Git so Vercel can serve it
+# Note: public/ is committed to Git for Vercel deployment
+# Uncomment below if you want to ignore it locally
 # public/
 
