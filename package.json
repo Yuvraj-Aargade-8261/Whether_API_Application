@@ -1,0 +1,12 @@
+{
+  "name": "weather-api-app",
+  "version": "1.0.0",
+  "description": "Weather API Application",
+  "scripts": {
+    "build": "bash build.sh || sh build.sh || (mkdir -p public && cp -r frontend/* public/)"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
+
