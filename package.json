@@ -1,12 +1,32 @@
 {
   "name": "weather-api-app",
   "version": "1.0.0",
-  "description": "Weather API Application",
+  "description": "Modern, responsive frontend for Weather API Application",
+  "main": "index.html",
   "scripts": {
-    "build": "bash build.sh || sh build.sh || (mkdir -p public && cp -r frontend/* public/)"
+    "start": "npx http-server -p 8000 -c-1",
+    "dev": "npx http-server -p 8000 -c-1 -o",
+    "serve": "python -m http.server 8000"
   },
-  "engines": {
-    "node": ">=18.x"
-  }
+  "keywords": [
+    "weather",
+    "api",
+    "frontend",
+    "responsive",
+    "vanilla-js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
 
