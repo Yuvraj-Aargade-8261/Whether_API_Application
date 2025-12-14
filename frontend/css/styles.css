@@ -105,6 +105,11 @@ body {
     z-index: -1;
     overflow: hidden;
     background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 50%, #2A2F4A 100%);
+    /* Add subtle light gradient overlay */
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
 }
 
 /* Container */
@@ -469,52 +474,123 @@ body {
 /* Weather Details Grid */
 .weather-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
 }
 
 .detail-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius-lg);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
     transition: all var(--transition-normal);
+    overflow: hidden;
+    min-height: 180px;
+}
+
+.detail-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-lg);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light), var(--secondary-color));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.detail-item:hover::before {
+    opacity: 1;
+}
+
+.detail-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.detail-item:hover::after {
+    width: 200px;
+    height: 200px;
 }
 
 .detail-item:hover {
-    background: rgba(255, 255, 255, 0.06);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3),
+                0 0 40px rgba(74, 144, 226, 0.2);
 }
 
 .detail-item i {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-3xl);
     color: var(--primary-color);
-    width: 40px;
-    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(74, 144, 226, 0.15);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+    transition: all var(--transition-normal);
+    border: 2px solid rgba(74, 144, 226, 0.3);
+}
+
+.detail-item:hover i {
+    background: rgba(74, 144, 226, 0.25);
+    transform: rotate(360deg) scale(1.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+    color: var(--primary-light);
 }
 
 .detail-content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .detail-label {
     font-size: var(--font-size-sm);
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: var(--spacing-xs);
 }
 
 .detail-value {
-    font-size: var(--font-size-lg);
-    font-weight: 600;
+    font-size: var(--font-size-3xl);
     color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(74, 144, 226, 0.3);
 }
 
 /* Error Message */
