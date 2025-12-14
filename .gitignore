@@ -71,3 +71,6 @@ frontend/package-lock.json
 # Vercel
 .vercel
 
+# Generated public directory (copy of frontend for Vercel)
+public/
+
