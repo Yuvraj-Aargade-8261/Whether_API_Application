@@ -814,3 +814,397 @@
     animation: checkmark 0.5s ease;
 }
 
+/* Particle Animations */
+@keyframes particleFloat1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(50px, -100px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes particleFloat2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-40px, -120px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes particleFloat3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(60px, -90px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes particleFloat4 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50px, -110px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes particleFloat5 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(45px, -95px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes particleTwinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes particleDrift {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(30px, -30px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-20px, -60px) rotate(240deg);
+    }
+    100% {
+        transform: translate(10px, -90px) rotate(360deg);
+    }
+}
+
+/* Particles Container */
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Individual Particles */
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8),
+                0 0 8px rgba(200, 220, 255, 0.6),
+                0 0 12px rgba(150, 180, 255, 0.4);
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+/* Particle Positions and Animations - Random distribution */
+.particles-container .particle:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation: particleFloat1 8s ease-in-out infinite,
+               particleTwinkle 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.particles-container .particle:nth-child(2) {
+    left: 25%;
+    top: 15%;
+    animation: particleFloat2 10s ease-in-out infinite,
+               particleTwinkle 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.particles-container .particle:nth-child(3) {
+    left: 40%;
+    top: 30%;
+    animation: particleFloat3 9s ease-in-out infinite,
+               particleTwinkle 3.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.particles-container .particle:nth-child(4) {
+    left: 55%;
+    top: 10%;
+    animation: particleFloat4 11s ease-in-out infinite,
+               particleTwinkle 4.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.particles-container .particle:nth-child(5) {
+    left: 70%;
+    top: 25%;
+    animation: particleFloat5 8.5s ease-in-out infinite,
+               particleTwinkle 3.2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.particles-container .particle:nth-child(6) {
+    left: 85%;
+    top: 35%;
+    animation: particleFloat1 9.5s ease-in-out infinite,
+               particleTwinkle 4.2s ease-in-out infinite;
+    animation-delay: 2.5s;
+}
+
+.particles-container .particle:nth-child(7) {
+    left: 15%;
+    top: 50%;
+    animation: particleFloat2 10.5s ease-in-out infinite,
+               particleTwinkle 3.8s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.particles-container .particle:nth-child(8) {
+    left: 30%;
+    top: 60%;
+    animation: particleFloat3 8.8s ease-in-out infinite,
+               particleTwinkle 4.1s ease-in-out infinite;
+    animation-delay: 3.5s;
+}
+
+.particles-container .particle:nth-child(9) {
+    left: 50%;
+    top: 45%;
+    animation: particleFloat4 9.2s ease-in-out infinite,
+               particleTwinkle 3.6s ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+.particles-container .particle:nth-child(10) {
+    left: 65%;
+    top: 55%;
+    animation: particleFloat5 10.2s ease-in-out infinite,
+               particleTwinkle 4.3s ease-in-out infinite;
+    animation-delay: 4.5s;
+}
+
+.particles-container .particle:nth-child(11) {
+    left: 80%;
+    top: 65%;
+    animation: particleFloat1 8.3s ease-in-out infinite,
+               particleTwinkle 3.4s ease-in-out infinite;
+    animation-delay: 5s;
+}
+
+.particles-container .particle:nth-child(12) {
+    left: 20%;
+    top: 70%;
+    animation: particleFloat2 9.8s ease-in-out infinite,
+               particleTwinkle 4.4s ease-in-out infinite;
+    animation-delay: 5.5s;
+}
+
+.particles-container .particle:nth-child(13) {
+    left: 35%;
+    top: 75%;
+    animation: particleFloat3 10.8s ease-in-out infinite,
+               particleTwinkle 3.7s ease-in-out infinite;
+    animation-delay: 6s;
+}
+
+.particles-container .particle:nth-child(14) {
+    left: 60%;
+    top: 80%;
+    animation: particleFloat4 8.7s ease-in-out infinite,
+               particleTwinkle 4.0s ease-in-out infinite;
+    animation-delay: 6.5s;
+}
+
+.particles-container .particle:nth-child(15) {
+    left: 75%;
+    top: 15%;
+    animation: particleFloat5 9.3s ease-in-out infinite,
+               particleTwinkle 3.9s ease-in-out infinite;
+    animation-delay: 7s;
+}
+
+.particles-container .particle:nth-child(16) {
+    left: 5%;
+    top: 40%;
+    animation: particleFloat1 10.3s ease-in-out infinite,
+               particleTwinkle 4.5s ease-in-out infinite;
+    animation-delay: 7.5s;
+}
+
+.particles-container .particle:nth-child(17) {
+    left: 45%;
+    top: 5%;
+    animation: particleFloat2 8.6s ease-in-out infinite,
+               particleTwinkle 3.3s ease-in-out infinite;
+    animation-delay: 8s;
+}
+
+.particles-container .particle:nth-child(18) {
+    left: 90%;
+    top: 50%;
+    animation: particleFloat3 9.7s ease-in-out infinite,
+               particleTwinkle 4.6s ease-in-out infinite;
+    animation-delay: 8.5s;
+}
+
+.particles-container .particle:nth-child(19) {
+    left: 12%;
+    top: 85%;
+    animation: particleFloat4 10.4s ease-in-out infinite,
+               particleTwinkle 3.5s ease-in-out infinite;
+    animation-delay: 9s;
+}
+
+.particles-container .particle:nth-child(20) {
+    left: 95%;
+    top: 20%;
+    animation: particleFloat5 8.9s ease-in-out infinite,
+               particleTwinkle 4.7s ease-in-out infinite;
+    animation-delay: 9.5s;
+}
+
+.particles-container .particle:nth-child(21) {
+    left: 8%;
+    top: 60%;
+    animation: particleFloat1 9.1s ease-in-out infinite,
+               particleTwinkle 3.1s ease-in-out infinite;
+    animation-delay: 10s;
+}
+
+.particles-container .particle:nth-child(22) {
+    left: 22%;
+    top: 5%;
+    animation: particleFloat2 10.6s ease-in-out infinite,
+               particleTwinkle 4.8s ease-in-out infinite;
+    animation-delay: 10.5s;
+}
+
+.particles-container .particle:nth-child(23) {
+    left: 58%;
+    top: 70%;
+    animation: particleFloat3 8.4s ease-in-out infinite,
+               particleTwinkle 3.6s ease-in-out infinite;
+    animation-delay: 11s;
+}
+
+.particles-container .particle:nth-child(24) {
+    left: 88%;
+    top: 75%;
+    animation: particleFloat4 9.6s ease-in-out infinite,
+               particleTwinkle 4.2s ease-in-out infinite;
+    animation-delay: 11.5s;
+}
+
+.particles-container .particle:nth-child(25) {
+    left: 18%;
+    top: 45%;
+    animation: particleFloat5 10.1s ease-in-out infinite,
+               particleTwinkle 3.8s ease-in-out infinite;
+    animation-delay: 12s;
+}
+
+.particles-container .particle:nth-child(26) {
+    left: 42%;
+    top: 85%;
+    animation: particleFloat1 8.2s ease-in-out infinite,
+               particleTwinkle 4.4s ease-in-out infinite;
+    animation-delay: 12.5s;
+}
+
+.particles-container .particle:nth-child(27) {
+    left: 68%;
+    top: 8%;
+    animation: particleFloat2 9.4s ease-in-out infinite,
+               particleTwinkle 3.2s ease-in-out infinite;
+    animation-delay: 13s;
+}
+
+.particles-container .particle:nth-child(28) {
+    left: 92%;
+    top: 60%;
+    animation: particleFloat3 10.7s ease-in-out infinite,
+               particleTwinkle 4.1s ease-in-out infinite;
+    animation-delay: 13.5s;
+}
+
+.particles-container .particle:nth-child(29) {
+    left: 28%;
+    top: 90%;
+    animation: particleFloat4 8.5s ease-in-out infinite,
+               particleTwinkle 3.7s ease-in-out infinite;
+    animation-delay: 14s;
+}
+
+.particles-container .particle:nth-child(30) {
+    left: 72%;
+    top: 40%;
+    animation: particleFloat5 9.9s ease-in-out infinite,
+               particleTwinkle 4.3s ease-in-out infinite;
+    animation-delay: 14.5s;
+}
+
