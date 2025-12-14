@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: weather-api-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: OPENWEATHER_API_KEY
+        value: 6c693f3402e404265cfde9786cde3894
+      - key: FLASK_ENV
+        value: production
+      - key: PORT
+        value: 10000
+

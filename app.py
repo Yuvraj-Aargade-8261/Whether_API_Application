@@ -14,7 +14,8 @@ from backend.utils import validate_city, handle_error
 load_dotenv()
 
 # Initialize Flask app
-app = Flask(__name__, static_folder='frontend', static_url_path='')
+# Serve static files from root directory (for deployment)
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)  # Enable CORS for frontend
 
 # Configuration
@@ -34,8 +35,15 @@ def index():
 
 @app.route('/<path:path>')
 def serve_static(path):
-    """Serve static files from frontend directory"""
-    return app.send_static_file(path)
+    """Serve static files from root directory"""
+    # Exclude API routes
+    if path.startswith('api/'):
+        return jsonify({'error': 'Not found'}), 404
+    try:
+        return app.send_static_file(path)
+    except:
+        # Fallback to index.html for SPA routing
+        return app.send_static_file('index.html')
 
 
 @app.route('/api/weather/current', methods=['GET'])
